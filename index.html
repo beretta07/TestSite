@@ -309,27 +309,48 @@
   .about-card h3{ font-size: 16px; margin-bottom: 8px; }
 
   /* Channels */
-  .channels{
-    display: grid; gap: 14px;
-  }
-  @media (min-width: 600px){ .channels{ grid-template-columns: repeat(2,1fr); } }
+  .channels{ display: grid; gap: 12px; }
+  @media (min-width: 620px){ .channels{ grid-template-columns: repeat(2,1fr); } }
+  @media (min-width: 960px){ .channels{ grid-template-columns: repeat(3,1fr); } }
   .channel{
-    display: flex; justify-content: space-between; align-items: center; gap: 12px;
-    padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius-m);
-    text-decoration: none; color: var(--ink);
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 18px; min-height: 74px;
+    border: 1px solid var(--line); border-radius: var(--radius-m);
+    background: var(--bg); text-decoration: none; color: var(--ink);
+    transition: transform .18s var(--ease), border-color .18s ease,
+                background-color .18s ease, box-shadow .18s ease;
   }
-  .channel:hover{ background: var(--surface); }
-  .channel-name{ font-family: var(--font-mono); font-size: 14px; font-weight: 700; }
-  .channel-desc{ font-size: 12.5px; color: var(--ink-65); margin-top: 2px; }
-  .channel-arrow{ width: 16px; height: 16px; flex-shrink: 0; color: var(--ink-65); }
-  .channels-secondary{
-    display: flex; flex-wrap: wrap; gap: 8px 24px;
-    margin-top: 16px;
+  .channel:hover{
+    background: var(--surface);
+    border-color: color-mix(in srgb, var(--ink) 22%, var(--bg));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
   }
-  .channels-secondary a{
-    font-size: 13px; color: var(--ink-65); text-decoration: none;
+  .channel:active{ transform: scale(.985); }
+  .channel-icon{
+    width: 40px; height: 40px; flex-shrink: 0;
+    border-radius: 12px; border: 1px solid var(--line); background: var(--surface);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--ink-65);
+    transition: background-color .18s ease, color .18s ease;
   }
-  .channels-secondary a:hover{ color: var(--ink); text-decoration: underline; }
+  .channel:hover .channel-icon{ background: var(--bg); color: var(--accent); }
+  .channel-icon svg{ width: 19px; height: 19px; }
+  .channel-text{ display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+  .channel-name{ font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; }
+  .channel-desc{
+    font-size: 12.5px; color: var(--ink-65); line-height: 1.35;
+  }
+  .channel-arrow{
+    width: 15px; height: 15px; flex-shrink: 0; color: var(--ink-65);
+    transition: transform .2s var(--ease), color .18s ease;
+  }
+  .channel:hover .channel-arrow{ transform: translate(2px,-2px); color: var(--ink); }
+  @media (prefers-reduced-motion: reduce){
+    .channel, .channel-arrow, .channel-icon{ transition: none; }
+    .channel:hover{ transform: none; }
+    .channel:hover .channel-arrow{ transform: none; }
+  }
 
   /* Footer */
   footer{ border-top: 1px solid var(--line); padding: 40px 0; }
@@ -472,25 +493,56 @@
       </div>
       <div class="channels">
         <a class="channel" href="https://t.me/shoppmeri" target="_blank" rel="noopener">
-          <span>
+          <span class="channel-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+          </span>
+          <span class="channel-text">
             <span class="channel-name">@shoppmeri</span>
             <span class="channel-desc">Витрина добавок в наличии</span>
           </span>
           <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
         <a class="channel" href="https://t.me/maggomeri" target="_blank" rel="noopener">
-          <span>
+          <span class="channel-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+          </span>
+          <span class="channel-text">
             <span class="channel-name">@maggomeri</span>
             <span class="channel-desc">Личка для заказов и вопросов</span>
           </span>
           <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
+        <a class="channel" href="https://t.me/suppmeri" target="_blank" rel="noopener">
+          <span class="channel-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+          </span>
+          <span class="channel-text">
+            <span class="channel-name">@suppmeri</span>
+            <span class="channel-desc">Разборы по исследованиям</span>
+          </span>
+          <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+        <a class="channel" href="https://t.me/faqqomeri" target="_blank" rel="noopener">
+          <span class="channel-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+          </span>
+          <span class="channel-text">
+            <span class="channel-name">@faqqomeri</span>
+            <span class="channel-desc">Глоссарий терминов</span>
+          </span>
+          <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+        <a class="channel" href="https://t.me/feedmeri" target="_blank" rel="noopener">
+          <span class="channel-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+          </span>
+          <span class="channel-text">
+            <span class="channel-name">@feedmeri</span>
+            <span class="channel-desc">Отзывы покупателей</span>
+          </span>
+          <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
       </div>
-      <ul class="channels-secondary">
-        <li><a href="https://t.me/suppmeri" target="_blank" rel="noopener">@suppmeri — база знаний</a></li>
-        <li><a href="https://t.me/faqqomeri" target="_blank" rel="noopener">@faqqomeri — глоссарий терминов</a></li>
-        <li><a href="https://t.me/feedmeri" target="_blank" rel="noopener">@feedmeri — отзывы</a></li>
-      </ul>
     </div>
   </section>
 
@@ -598,7 +650,7 @@
   });
 
   /* ---------- Scroll reveal ---------- */
-  var revealTargets = document.querySelectorAll('.trust-item, .about-card, .channel, .channels-secondary');
+  var revealTargets = document.querySelectorAll('.trust-item, .about-card, .channel');
   if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
     revealTargets.forEach(function(el){ el.classList.add('reveal'); });
     var io = new IntersectionObserver(function(entries){

@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог — shoppmeri</title>
+<meta name="description" content="Все добавки в наличии: протеин, креатин, предтрены, добавки для сна, тестостерона и иммунитета. Фильтр по категориям, заказ в Telegram.">
+<link rel="canonical" href="https://beretta07.github.io/TestSite/catalog.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cmask id='m'%3E%3Crect width='512' height='512' fill='%23000'/%3E%3Ccircle cx='256' cy='256' r='170' fill='%23fff'/%3E%3Cg fill='%23000'%3E%3Crect x='155' y='60' width='30' height='241'/%3E%3Crect x='241' y='130' width='30' height='253'/%3E%3Crect x='327' y='211' width='30' height='241'/%3E%3C/g%3E%3C/mask%3E%3Crect width='512' height='512' rx='115' fill='%230A0A0C' mask='url(%23m)'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Каталог — shoppmeri">
+<meta property="og:description" content="Все добавки в наличии: протеин, креатин, предтрены, добавки для сна, тестостерона и иммунитета.">
+<meta property="og:url" content="https://beretta07.github.io/TestSite/catalog.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)">
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('mm-theme');
+    var dark = saved === 'dark' ||
+      ((!saved || saved === 'auto') && matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  }catch(e){}
+})();
+</script>
+<style>
+  :root{
+    --step: 4px;
+    --container: 1240px;
+    --bg: #FFFFFF;
+    --surface: #F4F5F7;
+    --ink: #10131A;
+    --ink-65: color-mix(in srgb, var(--ink) 65%, var(--bg));
+    --line: color-mix(in srgb, var(--ink) 12%, var(--bg));
+    --accent: #1E46D6;
+    --accent-ink: #FFFFFF;
+    --accent-soft: color-mix(in srgb, var(--accent) 12%, var(--bg));
+    --ease: cubic-bezier(.32,.72,0,1);
+    --radius-s: 8px;
+    --radius-m: 14px;
+    --radius-l: 22px;
+    --shadow: 0 1px 2px color-mix(in srgb, var(--ink) 6%, transparent), 0 12px 32px color-mix(in srgb, var(--ink) 8%, transparent);
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #0B0E14;
+      --surface: #12151D;
+      --ink: #ECEEF3;
+      --line: color-mix(in srgb, var(--ink) 14%, var(--bg));
+      --accent: #6E8CFF;
+      --accent-ink: #0B0E14;
+      --accent-soft: color-mix(in srgb, var(--accent) 16%, var(--bg));
+      --shadow: 0 1px 2px color-mix(in srgb, black 30%, transparent), 0 20px 40px color-mix(in srgb, black 40%, transparent);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B0E14;
+    --surface: #12151D;
+    --ink: #ECEEF3;
+    --line: color-mix(in srgb, var(--ink) 14%, var(--bg));
+    --accent: #6E8CFF;
+    --accent-ink: #0B0E14;
+    --accent-soft: color-mix(in srgb, var(--accent) 16%, var(--bg));
+    --shadow: 0 1px 2px color-mix(in srgb, black 30%, transparent), 0 20px 40px color-mix(in srgb, black 40%, transparent);
+  }
+  :root[data-theme="light"]{
+    --bg: #FFFFFF;
+    --surface: #F4F5F7;
+    --ink: #10131A;
+    --line: color-mix(in srgb, var(--ink) 12%, var(--bg));
+    --accent: #1E46D6;
+    --accent-ink: #FFFFFF;
+    --accent-soft: color-mix(in srgb, var(--accent) 12%, var(--bg));
+    --shadow: 0 1px 2px color-mix(in srgb, var(--ink) 6%, transparent), 0 12px 32px color-mix(in srgb, var(--ink) 8%, transparent);
+  }
+
+  *,*::before,*::after{ box-sizing: border-box; }
+  html{
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 96px;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    html{ scroll-behavior: smooth; }
+  }
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color: inherit; -webkit-tap-highlight-color: transparent; }
+  button{
+    font: inherit; color: inherit;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none; user-select: none;
+  }
+  h1,h2,h3,p{ margin: 0; }
+  h1,h2{ text-wrap: balance; }
+  ul{ margin:0; padding:0; list-style:none; }
+
+  .container{ width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: 20px; }
+  @media (min-width: 600px){ .container{ padding-inline: 40px; } }
+  @media (min-width: 900px){ .container{ padding-inline: 64px; } }
+
+  .skip-link{
+    position: fixed; top: -100px; left: 20px; z-index: 200;
+    background: var(--ink); color: var(--bg);
+    padding: 12px 18px; border-radius: var(--radius-s);
+    transition: top .15s ease;
+  }
+  .skip-link:focus{ top: 20px; }
+
+  :focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* Тактильная отдача на нажатие */
+  .btn, .icon-btn, .brand, .btn-add, .chip, .mobile-cart-bar button{
+    transition: transform .18s var(--ease), background-color .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .btn:active, .icon-btn:active, .brand:active, .btn-add:active, .chip:active, .mobile-cart-bar button:active{
+    transform: scale(.97);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .btn, .icon-btn, .brand, .btn-add, .chip, .mobile-cart-bar button{ transition: none; }
+    .btn:active, .icon-btn:active, .brand:active, .btn-add:active, .chip:active, .mobile-cart-bar button:active{ transform: none; }
+  }
+
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-65);
+  }
+
+  .mark{ flex-shrink: 0; color: var(--ink); transition: transform .4s var(--ease); transform-origin: 50% 50%; }
+
+  .wordmark{
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: .02em;
+  }
+
+  /* Header */
+  header{
+    position: sticky; top: 0; z-index: 100;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-row{
+    display: flex; align-items: center; gap: 16px;
+    height: 72px;
+  }
+  .brand{
+    display: flex; align-items: center; gap: 10px;
+    background: none; border: none; padding: 8px 6px; margin-left: -6px;
+    cursor: pointer;
+    margin-right: auto;
+    border-radius: var(--radius-s);
+  }
+  .brand:hover{ background: var(--surface); }
+  .brand[aria-expanded="true"] .mark{ transform: rotate(90deg); }
+  .header-actions{ display: flex; align-items: center; gap: 8px; }
+  .icon-btn{
+    width: 44px; height: 44px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: transparent; border: 1px solid var(--line); border-radius: 999px;
+    cursor: pointer; position: relative;
+  }
+  .icon-btn:hover{ background: var(--surface); }
+  .icon-btn svg{ width: 20px; height: 20px; }
+  .cart-count{
+    position: absolute; top: -4px; right: -4px;
+    min-width: 18px; height: 18px; padding: 0 4px;
+    border-radius: 999px; background: var(--accent); color: var(--accent-ink);
+    font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .cart-count[hidden]{ display: none; }
+
+  .nav-panel{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .38s var(--ease);
+    border-bottom: 1px solid transparent;
+    background: var(--bg);
+  }
+  .nav-panel.open{ max-height: 400px; border-bottom-color: var(--line); transition-delay: .12s; }
+  .nav-panel ul{ padding: 8px 0 4px; }
+  .nav-panel li, .theme-row{
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity .3s ease, transform .3s var(--ease);
+  }
+  .nav-panel.open li, .nav-panel.open .theme-row{ opacity: 1; transform: translateY(0); }
+  .nav-panel.open li:nth-child(1){ transition-delay: .18s; }
+  .nav-panel.open li:nth-child(2){ transition-delay: .24s; }
+  .nav-panel.open li:nth-child(3){ transition-delay: .3s; }
+  .nav-panel.open .theme-row{ transition-delay: .36s; }
+  .nav-panel a{
+    display: block; padding: 12px 0; text-decoration: none; font-size: 15px; color: var(--ink-65);
+  }
+  .nav-panel a:hover{ color: var(--ink); }
+  .nav-panel a[aria-current="page"]{ color: var(--ink); font-weight: 600; }
+
+  .theme-row{
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+    padding: 14px 0 18px; margin-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+  .theme-label{
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--ink-65);
+  }
+  .segmented{
+    display: inline-flex; gap: 2px; padding: 3px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  }
+  .segmented button{
+    height: 34px; padding: 0 16px; border: none; background: none; border-radius: 999px;
+    font-size: 13px; color: var(--ink-65); cursor: pointer; white-space: nowrap;
+    transition: background-color .2s ease, color .2s ease, transform .18s var(--ease);
+  }
+  .segmented button:hover{ color: var(--ink); }
+  .segmented button:active{ transform: scale(.96); }
+  .segmented button[aria-pressed="true"]{
+    background: var(--bg); color: var(--ink); font-weight: 600;
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--ink) 12%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .mark, .nav-panel, .nav-panel li, .theme-row, .segmented button{ transition: none !important; }
+  }
+
+  /* Page head */
+  .back-link{
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 14px; color: var(--ink-65); text-decoration: none;
+    margin-bottom: 16px;
+  }
+  .back-link:hover{ color: var(--ink); }
+  .page-head{ padding: 40px 0 8px; }
+  @media (min-width: 900px){ .page-head{ padding: 56px 0 8px; } }
+  .page-head h1{
+    font-size: 28px; letter-spacing: -.01em; margin-top: 10px;
+  }
+  @media (min-width: 900px){ .page-head h1{ font-size: 36px; } }
+  .page-sub{ margin-top: 10px; color: var(--ink-65); font-size: 15px; max-width: 56ch; }
+
+  section{ padding: 32px 0 64px; }
+  @media (min-width: 900px){ section{ padding: 40px 0 96px; } }
+
+  /* Toolbar / Chips */
+  .toolbar{
+    display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  .chips{ display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip{
+    height: 40px; padding: 0 18px; border-radius: 999px;
+    border: 1px solid var(--line); background: transparent;
+    font-size: 14px; cursor: pointer; white-space: nowrap;
+  }
+  .chip:hover{ background: var(--surface); }
+  .chip[aria-pressed="true"]{ background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .sort-select{
+    height: 40px; padding: 0 14px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+    font-size: 13.5px; cursor: pointer;
+  }
+
+  /* Product grid */
+  .grid{
+    display: grid; gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .card{
+    border: 1px solid var(--line); border-radius: var(--radius-m);
+    background: var(--bg);
+    display: flex; flex-direction: column; overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .card-media{
+    aspect-ratio: 1/1; background: var(--surface);
+    display: flex; align-items: center; justify-content: center;
+    padding: 28px; overflow: hidden;
+  }
+  .card-media svg{ width: 62%; height: 62%; color: var(--ink-65); transition: transform .25s ease; }
+  .card:hover .card-media svg{ transform: scale(1.04); }
+  .card-body{ padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .card-cat{ font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-65); }
+  .card-name{ font-size: 16px; font-weight: 600; letter-spacing: -.005em; }
+  .card-unit{ font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-65); }
+  .card-blurb{ font-size: 13.5px; color: var(--ink-65); line-height: 1.45; flex: 1; }
+  .card-link{
+    font-size: 12.5px; color: var(--accent); text-decoration: none; font-weight: 600;
+  }
+  .card-link:hover{ text-decoration: underline; }
+  .card-footer{ display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+  .card-price{ font-family: var(--font-mono); font-size: 16px; font-weight: 700; }
+  .btn-add{
+    height: 40px; padding: 0 16px; border-radius: 999px;
+    background: var(--surface); border: 1px solid var(--line);
+    font-size: 13.5px; font-weight: 600; cursor: pointer;
+  }
+  .btn-add:hover{ background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn-add[data-added="true"]{ background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+  .empty-state{ padding: 48px 0; text-align: center; color: var(--ink-65); }
+
+  /* Footer */
+  footer{ border-top: 1px solid var(--line); padding: 40px 0; }
+  .disclaimer{
+    font-size: 12.5px; color: var(--ink-65); line-height: 1.6;
+    max-width: 76ch; padding-bottom: 24px; border-bottom: 1px solid var(--line); margin-bottom: 24px;
+  }
+  .disclaimer strong{ color: var(--ink); }
+  .footer-row{
+    display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
+  }
+  .footer-brand{ display: flex; align-items: center; gap: 10px; }
+  .legal-links{ display: flex; flex-wrap: wrap; gap: 16px; }
+  .legal-links a{ font-size: 13px; color: var(--ink-65); text-decoration: none; }
+  .legal-links a:hover{ color: var(--ink); text-decoration: underline; }
+  .copyright{ font-size: 12.5px; color: var(--ink-65); margin-top: 20px; }
+
+  /* Cart drawer */
+  .overlay{
+    position: fixed; inset: 0; background: color-mix(in srgb, black 45%, transparent);
+    opacity: 0; pointer-events: none; transition: opacity .2s ease;
+    z-index: 150;
+  }
+  .overlay.open{ opacity: 1; pointer-events: auto; }
+  .drawer{
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: min(420px, 100vw);
+    background: var(--bg);
+    border-left: 1px solid var(--line);
+    transform: translateX(100%);
+    transition: transform .4s var(--ease);
+    z-index: 151;
+    display: flex; flex-direction: column;
+  }
+  .drawer.open{ transform: translateX(0); }
+  .drawer-head{
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px; border-bottom: 1px solid var(--line);
+  }
+  .drawer-head h2{ font-size: 18px; }
+  .drawer-body{
+    flex: 1; overflow-y: auto; padding: 8px 20px;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cart-item{ display: flex; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .cart-item-media{
+    width: 56px; height: 56px; border-radius: var(--radius-s); background: var(--surface);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .cart-item-media svg{ width: 60%; height: 60%; color: var(--ink-65); }
+  .cart-item-info{ flex: 1; min-width: 0; }
+  .cart-item-name{ font-size: 14px; font-weight: 600; }
+  .cart-item-unit{ font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-65); margin-top: 2px; }
+  .cart-item-row{ display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+  .qty{ display: flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; height: 40px; padding: 0 4px; }
+  .qty button{
+    width: 36px; height: 36px; border: none; background: none; cursor: pointer;
+    font-size: 17px; line-height: 1; border-radius: 999px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .qty button:hover{ background: var(--surface); }
+  .qty button:active{ background: var(--line); }
+  .qty span{ min-width: 20px; text-align: center; font-family: var(--font-mono); font-size: 13px; }
+  .cart-item-price{ font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; }
+  .remove-btn{
+    background: none; border: none; color: var(--ink-65); font-size: 12px;
+    text-decoration: underline; cursor: pointer; margin-top: 4px; padding: 10px 0;
+  }
+  .remove-btn:hover{ color: var(--ink); }
+  .drawer-empty{ padding: 60px 0; text-align: center; color: var(--ink-65); font-size: 14px; }
+  .drawer-foot{ padding: 20px; border-top: 1px solid var(--line); }
+  .drawer-total{ display: flex; justify-content: space-between; font-size: 15px; margin-bottom: 16px; }
+  .drawer-total strong{ font-family: var(--font-mono); font-size: 18px; }
+  .btn{
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 52px; padding: 0 26px; border-radius: 999px;
+    font-size: 15px; font-weight: 600; text-decoration: none; cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary{ background: var(--accent); color: var(--accent-ink); }
+  .btn-primary:hover{ background: color-mix(in srgb, var(--accent) 88%, black); }
+  .btn-checkout{ width: 100%; }
+  .drawer-note{ font-size: 12px; color: var(--ink-65); margin-top: 12px; text-align: center; }
+
+  /* Mobile cart bar */
+  .mobile-cart-bar{
+    display: none;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 140;
+    background: var(--bg); border-top: 1px solid var(--line);
+    padding: 12px 20px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    align-items: center; justify-content: space-between; gap: 12px;
+    box-shadow: 0 -8px 24px color-mix(in srgb, var(--ink) 10%, transparent);
+  }
+  .mobile-cart-bar:not([hidden]){ display: flex; }
+  .mobile-cart-bar span{ font-size: 13.5px; font-weight: 600; }
+  .mobile-cart-bar button{
+    height: 40px; padding: 0 20px; border-radius: 999px; border: none;
+    background: var(--accent); color: var(--accent-ink); font-size: 13.5px; font-weight: 600; cursor: pointer;
+  }
+  @media (min-width: 640px){ .mobile-cart-bar{ display: none !important; } }
+
+  /* Scroll reveal */
+  .reveal{ opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal-in{ opacity: 1; transform: translateY(0); }
+
+  [hidden]{ display: none !important; }
+  .sr-only{
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0; padding: 0; margin: -1px;
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#grid">Перейти к списку товаров</a>
+
+<header>
+  <div class="container header-row">
+    <button class="brand" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Открыть меню">
+      <svg class="mark" width="34" height="34" viewBox="0 0 512 512" aria-hidden="true">
+        <mask id="markCutHeader">
+          <rect width="512" height="512" fill="#000"/>
+          <circle cx="256" cy="256" r="170" fill="#fff"/>
+          <g fill="#000">
+            <rect x="155" y="60" width="30" height="241"/>
+            <rect x="241" y="130" width="30" height="253"/>
+            <rect x="327" y="211" width="30" height="241"/>
+          </g>
+        </mask>
+        <rect width="512" height="512" fill="currentColor" mask="url(#markCutHeader)"/>
+      </svg>
+      <span class="wordmark">shoppmeri</span>
+    </button>
+    <div class="header-actions">
+      <button class="icon-btn" id="cart-open" type="button" aria-label="Открыть корзину" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6"/>
+          <circle cx="10" cy="21" r="1.4"/>
+          <circle cx="17" cy="21" r="1.4"/>
+        </svg>
+        <span class="cart-count" id="cart-count" hidden>0</span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-panel" id="nav-panel" aria-label="Основная" inert>
+    <div class="container">
+      <ul>
+        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a href="index.html#about">О подборе</a></li>
+        <li><a href="index.html#contacts">Контакты</a></li>
+      </ul>
+      <div class="theme-row">
+        <span class="theme-label">Тема</span>
+        <div class="segmented" id="theme-switch" role="group" aria-label="Тема оформления">
+          <button type="button" data-theme-choice="light" aria-pressed="false">Светлая</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Тёмная</button>
+          <button type="button" data-theme-choice="auto" aria-pressed="false">Авто</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div class="container page-head">
+    <a class="back-link" href="index.html">← На главную</a>
+    <p class="eyebrow">Каталог</p>
+    <h1>В наличии сейчас</h1>
+    <p class="page-sub">Позиции сгруппированы по задачам. Цена и фасовка — как в актуальных постах витрины.</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2 class="sr-only">Список товаров</h2>
+      <div class="toolbar">
+        <div class="chips" id="chips" role="group" aria-label="Фильтр по категории"></div>
+        <label class="sort-label">
+          <span class="sr-only">Сортировка</span>
+          <select class="sort-select" id="sort-select">
+            <option value="default">По умолчанию</option>
+            <option value="price-asc">Сначала дешевле</option>
+            <option value="price-desc">Сначала дороже</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty-state" id="empty-state" hidden>В этой категории пока пусто — загляните позже.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p class="disclaimer">
+      <strong>БАД. НЕ ЯВЛЯЕТСЯ ЛЕКАРСТВЕННЫМ СРЕДСТВОМ.</strong>
+      Материалы на странице носят информационный характер и не являются призывом к самолечению.
+      Перед применением рекомендуется проконсультироваться со специалистом. Товары — от разных производителей,
+      витрина ведётся как личная продажа и не связана с этими брендами официально.
+    </p>
+    <div class="footer-row">
+      <div class="footer-brand">
+        <svg class="mark" width="26" height="26" viewBox="0 0 512 512" aria-hidden="true">
+          <mask id="markCutFooter">
+            <rect width="512" height="512" fill="#000"/>
+            <circle cx="256" cy="256" r="170" fill="#fff"/>
+            <g fill="#000">
+              <rect x="155" y="60" width="30" height="241"/>
+              <rect x="241" y="130" width="30" height="253"/>
+              <rect x="327" y="211" width="30" height="241"/>
+            </g>
+          </mask>
+          <rect width="512" height="512" fill="currentColor" mask="url(#markCutFooter)"/>
+        </svg>
+        <span class="wordmark">shoppmeri</span>
+      </div>
+      <div class="legal-links">
+        <a href="#">Публичная оферта</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Доставка и оплата</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 shoppmeri. Цены — в рублях, могут отличаться от актуальных в канале.</p>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" inert>
+  <div class="drawer-head">
+    <h2 id="drawer-title">Корзина</h2>
+    <button class="icon-btn" id="cart-close" type="button" aria-label="Закрыть корзину">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+  <div class="drawer-foot" id="drawer-foot" hidden>
+    <div class="drawer-total">
+      <span>Итого</span>
+      <strong id="cart-total">0 ₽</strong>
+    </div>
+    <button class="btn btn-primary btn-checkout" id="checkout-btn" type="button">Оформить заказ в Telegram</button>
+    <p class="drawer-note">Заказ откроется в Telegram с готовым составом корзины — останется отправить сообщение.</p>
+  </div>
+</aside>
+
+<div class="mobile-cart-bar" id="mobile-cart-bar" hidden>
+  <span id="mobile-cart-summary"></span>
+  <button type="button" id="mobile-cart-checkout">Оформить</button>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var CATEGORIES = [
+    { id: 'all', label: 'Все' },
+    { id: 'protein', label: 'Протеин' },
+    { id: 'training', label: 'Энергия и тренировка' },
+    { id: 'recovery', label: 'Восстановление и сон' },
+    { id: 'vitality', label: 'Тестостерон и либидо' },
+    { id: 'immunity', label: 'Иммунитет и ЖКТ' },
+    { id: 'vitamins', label: 'Витамины и минералы' }
+  ];
+
+  var CAT_LABEL = {};
+  CATEGORIES.forEach(function(c){ CAT_LABEL[c.id] = c.label; });
+
+  var PRODUCTS = [
+    { id: 'hydrolysate-beef', cat: 'protein', name: 'Говяжий протеин-гидролизат', unit: '900 г · 30 порций', price: 3900, servings: 30,
+      blurb: 'Лёгкий для ЖКТ белок без молочной основы — вариант для тех, кому сывороточный протеин тяжело заходит.' },
+    { id: 'whey-maxler', cat: 'protein', name: 'Сывороточный протеин', brand: 'Maxler', unit: '750 г · 25 порций', price: 3500, servings: 25,
+      blurb: 'Классический быстрый белок после тренировки, хороший вкус и растворимость.' },
+    { id: 'gainer', cat: 'protein', name: 'Гейнер с витаминами', unit: '1000 г · 10 порций', price: 1500, servings: 10,
+      blurb: 'Добор калорий и белка, когда набирать массу одной едой не получается.' },
+    { id: 'levron-clear-whey', cat: 'protein', name: 'Протеин-гидролизат Levron Clear', unit: '390 г · 15 порций', price: 2500, servings: 15,
+      blurb: 'Гидролизат для тех, кому обычный сывороточный протеин тяжело даётся по ЖКТ.' },
+    { id: 'bad-ass-whey', cat: 'protein', name: 'Сывороточный протеин Bad Ass Whey', unit: '2 кг · 60 порций', price: 6000, servings: 60,
+      blurb: 'Большая банка для набора массы и стабильного восстановления между тренировками.' },
+    { id: 'creatine', cat: 'training', name: 'Креатин моногидрат', brand: 'FA', unit: '300 г · 60 порций', price: 1800, servings: 60,
+      blurb: 'Одна из самых изученных добавок для силы и объёма мышечной работы — база, с которой начинают.' },
+    { id: 'electrolytes', cat: 'training', name: 'Электролиты', unit: '270 г · 30 порций', price: 1500, servings: 30,
+      blurb: 'Натрий, калий и магний помогают держать тонус на долгой тренировке, в жару и в бане.' },
+    { id: 'preworkout', cat: 'training', name: 'Предтренировочный комплекс', brand: 'Panda', unit: '447 г · 50 порций', price: 5000, servings: 50,
+      blurb: 'Альфа-GPC, тирозин и стимуляторы — для тяжёлых силовых тренировок, когда нужна собранность.' },
+    { id: 'fatburner-pre', cat: 'training', name: 'Жиросжигатель предтренировочный', unit: '30 капс · 30 порций', price: 1000, servings: 30,
+      blurb: 'Лёгкий стимулятор перед кардио: бодрость и меньше тяги перекусить на голодный тренинг.' },
+    { id: 'yohimbine', cat: 'training', name: 'Йохимбин HCL', unit: '90 таб · 90 порций', price: 1200, servings: 90,
+      blurb: 'Стимулятор для сушки, обычно принимают перед тренировкой натощак.' },
+    { id: 'beta-alanine', cat: 'training', name: 'Бета-аланин', brand: 'Kevin Levrone', unit: '120 таб · 40 порций', price: 1000, servings: 40,
+      blurb: 'Классика для многоповторных подходов — помогает дольше держать темп без забивания мышц.' },
+    { id: 'glutamine', cat: 'training', name: 'Глютамин', brand: 'FA Nutrition', unit: '300 г · 60 порций', price: 1500, servings: 60,
+      blurb: 'Может помогать быстрее восстанавливаться между тяжёлыми тренировками.' },
+    { id: 'pump-preworkout', cat: 'training', name: 'Предтрен PUMP', brand: 'Premium Nutrition', unit: '385 г · 44 порции', price: 2000, servings: 44,
+      blurb: 'Более лёгкий предтрен на памп и энергию, без перегруза стимуляторами.' },
+    { id: 'gear-eaa', cat: 'training', name: 'EAA аминокислоты', unit: '390 г · 62 порции', price: 2000, servings: 62,
+      blurb: 'Незаменимые аминокислоты — на восстановление в дни высокой нагрузки.' },
+    { id: 'full-energizer', cat: 'training', name: 'Предтрен Full Energizer', brand: 'Levrone', unit: '270 г · 30 порций', price: 2000, servings: 30,
+      blurb: 'Энергия и фокус перед тренировкой, без резкого спада после занятия.' },
+    { id: 'napalm-crea-test', cat: 'training', name: 'Креатин + тест-буст', brand: 'FA', unit: '255 г · 30 порций', price: 1800, servings: 30,
+      blurb: 'Креатин в связке с растительной поддержкой тестостерона.' },
+    { id: 'psychotic', cat: 'training', name: 'Предтрен Psychotic', unit: '220 г · 35 порций', price: 3900, servings: 35,
+      blurb: 'Один из самых мощных предтренов в линейке — для тех, кто уже знаком со стимуляторами.' },
+    { id: 'fsu-glycerol', cat: 'training', name: 'Глицерол-памп FSU Serum', unit: '473 мл · 16 порций', price: 3800, servings: 16,
+      blurb: 'Жидкий памп-агент для тренировок, где важна максимальная наполненность мышц.' },
+    { id: 'trec-fatburner', cat: 'training', name: 'Жиросжигатель Trec', unit: '120 капс · 30 порций', price: 2150, servings: 30,
+      blurb: 'Расход калорий, энергия и фокус в период сушки.' },
+    { id: 'alcar', cat: 'recovery', name: 'ALCAR (ацетил-л-карнитин)', brand: 'FuelUp', unit: '60 капс · 60 порций', price: 1800, servings: 60,
+      blurb: 'Форма карнитина для фокуса и энергии мозга, а не только для похудения.' },
+    { id: 'noxysleep', cat: 'recovery', name: 'Комплекс для сна', brand: 'Noxy', unit: '90 таб · 30–90 порций', price: 3500, servings: 60,
+      blurb: 'Может помогать расслабиться и уснуть, дозировка гибкая — от одной до трёх таблеток.' },
+    { id: 'phosphatidylserine', cat: 'recovery', name: 'Фосфатидилсерин', unit: '60 капс · 60 порций', price: 3300, servings: 60,
+      blurb: 'Может поддерживать память и концентрацию при высокой умственной нагрузке.' },
+    { id: 'gotu-kola', cat: 'recovery', name: 'Готу кола', brand: 'NOW', unit: '100 капс · 50 порций', price: 1200, servings: 50,
+      blurb: 'Растительная поддержка при стрессе — фокус, сосуды, состояние кожи.' },
+    { id: 'noxygen-reggen', cat: 'recovery', name: 'Noxygen Reggen', brand: 'Noxy', unit: '60 капс · 60 порций', price: 3700, servings: 60,
+      blurb: 'Поддержка суставов и связок в периоды высокой нагрузки.' },
+    { id: 'fenugreek', cat: 'vitality', name: 'Пажитник (фенугрек)', brand: 'NOW', unit: '100 капс · 50 порций', price: 1000, servings: 50,
+      blurb: 'Растительная поддержка либидо и тестостерона, эффект мягкий, без гормональной нагрузки.' },
+    { id: 'epimedium', cat: 'vitality', name: 'Паста Epimedium', unit: '240 г · 20 порций', price: 3500, servings: 20,
+      blurb: 'Растительный экстракт для энергии и либидо, принимается небольшими порциями пасты.' },
+    { id: 'boron-copper', cat: 'vitality', name: 'Бор + медь', brand: 'Noxy', unit: '120 таб · 120 порций', price: 1400, servings: 120,
+      blurb: 'Недооценённая пара микроэлементов: связки, кожа, суставы и гормональный фон.' },
+    { id: 'mutant-test', cat: 'vitality', name: 'Тест-бустер Mutant Test', unit: '90 капс · 30 порций', price: 2000, servings: 30,
+      blurb: 'Растительный комплекс для поддержки тестостерона и либидо.' },
+    { id: 'catsclaw', cat: 'immunity', name: 'Кошачий коготь (Cat’s Claw)', unit: '100 капс · 100 порций', price: 1500, servings: 100,
+      blurb: 'Растительная поддержка иммунитета, ЖКТ и суставов на каждый день.' },
+    { id: 'enzymes', cat: 'immunity', name: 'Пищеварительные ферменты', brand: 'NOW', unit: '90 капс · 90 порций', price: 2250, servings: 90,
+      blurb: 'Может помогать легче переваривать тяжёлую и белковую пищу — меньше тяжести после еды.' },
+    { id: 'selenium', cat: 'immunity', name: 'Селен', unit: '100 таб · 100 порций', price: 1300, servings: 100,
+      blurb: 'Микроэлемент для щитовидной железы и иммунитета в базовой суточной дозе.' },
+    { id: 'hitpack', cat: 'vitamins', name: 'HIT PACK — базовые витамины', brand: 'DY', unit: '30 саше по 8 шт · 30 порций', price: 4150, servings: 30,
+      blurb: 'Готовый набор витаминов и микроэлементов на месяц — без сборки по одной банке.' },
+    { id: 'calmagzinc', cat: 'vitamins', name: 'Кальций + магний + цинк', unit: '250 таб · 83 порции', price: 2400, servings: 83,
+      blurb: 'База для костей, сна и обычного суточного восполнения минералов.' },
+    { id: 'levrone-armour', cat: 'vitamins', name: 'Мультивитамины Levrone Armour', unit: '90+90 таб · 90 порций', price: 3500, servings: 90,
+      blurb: 'Полный набор витаминов и минералов для спортивного суточного рациона.' },
+    { id: 'adam', cat: 'vitamins', name: 'Мультивитамины ADAM', brand: 'NOW', unit: '90 капс · 45 порций', price: 3500, servings: 45,
+      blurb: 'Мужской мультивитаминный комплекс с акцентом на энергию.' }
+  ];
+
+  var PRODUCT_MAP = {};
+  PRODUCTS.forEach(function(p){ PRODUCT_MAP[p.id] = p; });
+
+  function formatPrice(n){
+    return n.toLocaleString('ru-RU') + ' ₽';
+  }
+
+  function bottleSVG(){
+    return '<svg viewBox="0 0 64 64" aria-hidden="true">' +
+      '<rect x="24" y="6" width="16" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>' +
+      '<rect x="16" y="14" width="32" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>' +
+      '<rect x="22" y="26" width="20" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/>' +
+      '<line x1="25" y1="32" x2="39" y2="32" stroke="currentColor" stroke-width="1.2" opacity=".6"/>' +
+      '<line x1="25" y1="37" x2="39" y2="37" stroke="currentColor" stroke-width="1.2" opacity=".6"/>' +
+      '</svg>';
+  }
+
+  function tubSVG(){
+    return '<svg viewBox="0 0 64 64" aria-hidden="true">' +
+      '<rect x="15" y="9" width="34" height="9" rx="3" fill="none" stroke="currentColor" stroke-width="2" opacity=".65"/>' +
+      '<path d="M17 18 L19.5 53 a4 4 0 0 0 4 3.6h17 a4 4 0 0 0 4-3.6 L48 18 Z" fill="none" stroke="currentColor" stroke-width="2"/>' +
+      '<line x1="21" y1="29" x2="43" y2="29" stroke="currentColor" stroke-width="1.2" opacity=".55"/>' +
+      '<line x1="22" y1="37" x2="42" y2="37" stroke="currentColor" stroke-width="1.2" opacity=".55"/>' +
+      '</svg>';
+  }
+
+  function mediaFor(p){
+    return /г ·|мл ·/.test(p.unit) ? tubSVG() : bottleSVG();
+  }
+
+  function perServing(p){
+    return Math.round(p.price / p.servings).toLocaleString('ru-RU') + ' ₽/порция';
+  }
+
+  /* ---------- Catalog render ---------- */
+  var chipsEl = document.getElementById('chips');
+  var gridEl = document.getElementById('grid');
+  var emptyStateEl = document.getElementById('empty-state');
+  var activeCat = 'all';
+
+  function countFor(catId){
+    if(catId === 'all') return PRODUCTS.length;
+    return PRODUCTS.filter(function(p){ return p.cat === catId; }).length;
+  }
+
+  function renderChips(){
+    chipsEl.innerHTML = CATEGORIES.map(function(c){
+      var n = countFor(c.id);
+      return '<button class="chip" type="button" data-cat="' + c.id + '" aria-pressed="' + (c.id === activeCat) + '">' +
+        c.label + ' <span aria-hidden="true">(' + n + ')</span></button>';
+    }).join('');
+  }
+
+  var sortMode = 'default';
+
+  function renderGrid(){
+    var list = activeCat === 'all' ? PRODUCTS.slice() : PRODUCTS.filter(function(p){ return p.cat === activeCat; });
+    if(sortMode === 'price-asc') list.sort(function(a,b){ return a.price - b.price; });
+    else if(sortMode === 'price-desc') list.sort(function(a,b){ return b.price - a.price; });
+
+    if(!list.length){
+      gridEl.innerHTML = '';
+      emptyStateEl.hidden = false;
+      return;
+    }
+    emptyStateEl.hidden = true;
+    gridEl.innerHTML = list.map(function(p){
+      var metaLine = CAT_LABEL[p.cat] + (p.brand ? ' · ' + p.brand : '');
+      return '<article class="card">' +
+        '<div class="card-media">' + mediaFor(p) + '</div>' +
+        '<div class="card-body">' +
+          '<p class="card-cat">' + metaLine + '</p>' +
+          '<h3 class="card-name">' + p.name + '</h3>' +
+          '<p class="card-unit">' + p.unit + ' · ' + perServing(p) + '</p>' +
+          '<p class="card-blurb">' + p.blurb + '</p>' +
+          '<a class="card-link" href="https://t.me/suppmeri" target="_blank" rel="noopener">Разбор состава в suppmeri →</a>' +
+          '<div class="card-footer">' +
+            '<span class="card-price">' + formatPrice(p.price) + '</span>' +
+            '<button class="btn-add" type="button" data-id="' + p.id + '">В корзину</button>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+  }
+
+  chipsEl.addEventListener('click', function(e){
+    var btn = e.target.closest('.chip');
+    if(!btn) return;
+    activeCat = btn.dataset.cat;
+    renderChips();
+    renderGrid();
+  });
+
+  document.getElementById('sort-select').addEventListener('change', function(e){
+    sortMode = e.target.value;
+    renderGrid();
+  });
+
+  gridEl.addEventListener('click', function(e){
+    var btn = e.target.closest('.btn-add');
+    if(!btn) return;
+    addToCart(btn.dataset.id);
+    btn.dataset.added = 'true';
+    btn.textContent = 'Добавлено';
+    setTimeout(function(){
+      btn.dataset.added = 'false';
+      btn.textContent = 'В корзину';
+    }, 1200);
+  });
+
+  renderChips();
+  renderGrid();
+
+  /* ---------- Theme ---------- */
+  var THEME_KEY = 'mm-theme';
+  var darkMedia = matchMedia('(prefers-color-scheme: dark)');
+  var themeButtons = Array.prototype.slice.call(
+    document.querySelectorAll('#theme-switch button')
+  );
+
+  function storedChoice(){
+    try{
+      var v = localStorage.getItem(THEME_KEY);
+      return (v === 'light' || v === 'dark') ? v : 'auto';
+    }catch(e){ return 'auto'; }
+  }
+
+  function applyChoice(choice, persist){
+    var effective = choice === 'auto' ? (darkMedia.matches ? 'dark' : 'light') : choice;
+    document.documentElement.setAttribute('data-theme', effective);
+    themeButtons.forEach(function(b){
+      b.setAttribute('aria-pressed', b.dataset.themeChoice === choice ? 'true' : 'false');
+    });
+    if(persist){
+      try{ localStorage.setItem(THEME_KEY, choice); }catch(e){}
+    }
+  }
+
+  applyChoice(storedChoice(), false);
+
+  themeButtons.forEach(function(b){
+    b.addEventListener('click', function(){
+      applyChoice(b.dataset.themeChoice, true);
+    });
+  });
+
+  darkMedia.addEventListener('change', function(){
+    if(storedChoice() === 'auto') applyChoice('auto', false);
+  });
+
+  /* ---------- Menu (logo toggle) ---------- */
+  var menuToggle = document.getElementById('menu-toggle');
+  var navPanel = document.getElementById('nav-panel');
+  function setMenu(open){
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navPanel.classList.toggle('open', open);
+    if(open){ navPanel.removeAttribute('inert'); }
+    else{ navPanel.setAttribute('inert', ''); }
+  }
+  menuToggle.addEventListener('click', function(){
+    setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+  });
+  navPanel.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ setMenu(false); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true'){
+      setMenu(false);
+      menuToggle.focus();
+    }
+  });
+  document.addEventListener('click', function(e){
+    if(menuToggle.getAttribute('aria-expanded') === 'true' &&
+       !navPanel.contains(e.target) && !menuToggle.contains(e.target)){
+      setMenu(false);
+    }
+  });
+
+  /* ---------- Cart ---------- */
+  var CART_KEY = 'mm-cart';
+  function loadCart(){
+    try{
+      var raw = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+      return raw.filter(function(item){ return PRODUCT_MAP[item.id]; });
+    }catch(e){ return []; }
+  }
+  function saveCart(cart){
+    try{ localStorage.setItem(CART_KEY, JSON.stringify(cart)); }catch(e){}
+  }
+  var cart = loadCart();
+
+  function addToCart(id){
+    var item = cart.find(function(i){ return i.id === id; });
+    if(item){ item.qty += 1; }
+    else{ cart.push({ id: id, qty: 1 }); }
+    saveCart(cart);
+    renderCart();
+  }
+  function setQty(id, qty){
+    if(qty <= 0){
+      cart = cart.filter(function(i){ return i.id !== id; });
+    } else {
+      var item = cart.find(function(i){ return i.id === id; });
+      if(item) item.qty = qty;
+    }
+    saveCart(cart);
+    renderCart();
+  }
+
+  var cartCountEl = document.getElementById('cart-count');
+  var drawerBody = document.getElementById('drawer-body');
+  var drawerFoot = document.getElementById('drawer-foot');
+  var cartTotalEl = document.getElementById('cart-total');
+  var mobileCartBar = document.getElementById('mobile-cart-bar');
+  var mobileCartSummary = document.getElementById('mobile-cart-summary');
+
+  function renderCart(){
+    var totalQty = cart.reduce(function(s,i){ return s + i.qty; }, 0);
+    cartCountEl.hidden = totalQty === 0;
+    cartCountEl.textContent = totalQty;
+    mobileCartBar.hidden = totalQty === 0;
+
+    if(!cart.length){
+      drawerBody.innerHTML = '<p class="drawer-empty">Корзина пока пуста</p>';
+      drawerFoot.hidden = true;
+      return;
+    }
+    drawerFoot.hidden = false;
+    var total = 0;
+    drawerBody.innerHTML = cart.map(function(item){
+      var p = PRODUCT_MAP[item.id];
+      var sum = p.price * item.qty;
+      total += sum;
+      return '<div class="cart-item" data-id="' + p.id + '">' +
+        '<div class="cart-item-media">' + bottleSVG() + '</div>' +
+        '<div class="cart-item-info">' +
+          '<p class="cart-item-name">' + p.name + '</p>' +
+          '<p class="cart-item-unit">' + p.unit + '</p>' +
+          '<div class="cart-item-row">' +
+            '<span class="qty">' +
+              '<button type="button" data-action="dec" aria-label="Уменьшить количество">−</button>' +
+              '<span>' + item.qty + '</span>' +
+              '<button type="button" data-action="inc" aria-label="Увеличить количество">+</button>' +
+            '</span>' +
+            '<span class="cart-item-price">' + formatPrice(sum) + '</span>' +
+          '</div>' +
+          '<button class="remove-btn" type="button" data-action="remove">Удалить</button>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+    cartTotalEl.textContent = formatPrice(total);
+    mobileCartSummary.textContent = totalQty + (totalQty === 1 ? ' товар' : totalQty < 5 ? ' товара' : ' товаров') + ' · ' + formatPrice(total);
+  }
+
+  drawerBody.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-action]');
+    if(!btn) return;
+    var row = btn.closest('.cart-item');
+    var id = row.dataset.id;
+    var item = cart.find(function(i){ return i.id === id; });
+    if(!item) return;
+    if(btn.dataset.action === 'inc') setQty(id, item.qty + 1);
+    else if(btn.dataset.action === 'dec') setQty(id, item.qty - 1);
+    else if(btn.dataset.action === 'remove') setQty(id, 0);
+  });
+
+  renderCart();
+
+  /* ---------- Drawer open/close ---------- */
+  var overlay = document.getElementById('overlay');
+  var drawer = document.getElementById('drawer');
+  var cartOpenBtn = document.getElementById('cart-open');
+  var cartCloseBtn = document.getElementById('cart-close');
+  var mainEl = document.querySelector('main');
+  var headerEl = document.querySelector('header');
+  var footerEl = document.querySelector('footer');
+  var lastFocused = null;
+  var scrollY = 0;
+
+  function focusableIn(el){
+    return Array.prototype.slice.call(
+      el.querySelectorAll('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])')
+    ).filter(function(n){ return n.offsetParent !== null; });
+  }
+
+  function openDrawer(){
+    lastFocused = document.activeElement;
+    scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = -scrollY + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+
+    overlay.classList.add('open');
+    drawer.classList.add('open');
+    drawer.removeAttribute('inert');
+    mainEl.setAttribute('inert', '');
+    headerEl.setAttribute('inert', '');
+    footerEl.setAttribute('inert', '');
+    cartCloseBtn.focus();
+    document.addEventListener('keydown', onDrawerKeydown);
+  }
+
+  function closeDrawer(){
+    overlay.classList.remove('open');
+    drawer.classList.remove('open');
+    drawer.setAttribute('inert', '');
+    mainEl.removeAttribute('inert');
+    headerEl.removeAttribute('inert');
+    footerEl.removeAttribute('inert');
+
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    window.scrollTo(0, scrollY);
+
+    document.removeEventListener('keydown', onDrawerKeydown);
+    if(lastFocused) lastFocused.focus();
+  }
+
+  function onDrawerKeydown(e){
+    if(e.key === 'Escape'){
+      closeDrawer();
+      return;
+    }
+    if(e.key === 'Tab'){
+      var f = focusableIn(drawer);
+      if(!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if(e.shiftKey && document.activeElement === first){
+        e.preventDefault(); last.focus();
+      } else if(!e.shiftKey && document.activeElement === last){
+        e.preventDefault(); first.focus();
+      }
+    }
+  }
+
+  cartOpenBtn.addEventListener('click', openDrawer);
+  cartCloseBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+
+  /* ---------- Telegram checkout ---------- */
+  function openTelegramCheckout(){
+    if(!cart.length) return;
+    var lines = cart.map(function(item){
+      var p = PRODUCT_MAP[item.id];
+      return '• ' + p.name + ' (' + p.unit + ') × ' + item.qty + ' — ' + formatPrice(p.price * item.qty);
+    });
+    var total = cart.reduce(function(s,i){ return s + PRODUCT_MAP[i.id].price * i.qty; }, 0);
+    var text = 'Здравствуйте! Хочу заказать:\n\n' + lines.join('\n') + '\n\nИтого: ' + formatPrice(total);
+    var url = 'https://t.me/maggomeri?text=' + encodeURIComponent(text);
+    var win = window.open(url, '_blank', 'noopener');
+    if(!win){ window.location.href = url; }
+  }
+  document.getElementById('checkout-btn').addEventListener('click', openTelegramCheckout);
+  document.getElementById('mobile-cart-checkout').addEventListener('click', openTelegramCheckout);
+
+  /* ---------- Scroll reveal ---------- */
+  var revealTargets = document.querySelectorAll('.page-head, .toolbar, .card, .about-card, .channel');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    revealTargets.forEach(function(el){ el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('reveal-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+    revealTargets.forEach(function(el){ io.observe(el); });
+  }
+
+})();
+</script>
+</body>
+</html>

@@ -11,6 +11,9 @@
 <meta property="og:title" content="shoppmeri — витрина добавок">
 <meta property="og:description" content="Протеин, креатин, добавки для сна, тестостерона и иммунитета — то, что реально есть в наличии. Заказ и вопросы — в Telegram.">
 <meta property="og:url" content="https://beretta07.github.io/TestSite/">
+<meta property="og:image" content="https://beretta07.github.io/TestSite/hero-bottle.jpg">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="1000">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)">
@@ -269,12 +272,20 @@
   .trust-item strong{ display: block; color: var(--ink); font-size: 14px; margin-bottom: 2px; }
 
   .hero-visual{
-    aspect-ratio: 4/5; border-radius: var(--radius-l);
-    background: var(--surface); border: 1px solid var(--line);
-    display: flex; align-items: center; justify-content: center;
-    padding: 40px;
+    aspect-ratio: 1/1; border-radius: var(--radius-l);
+    background: #0A0A0C; border: 1px solid var(--line);
+    overflow: hidden;
   }
-  .hero-visual svg{ width: 100%; height: 100%; }
+  .hero-visual img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .6s var(--ease);
+  }
+  .hero-visual:hover img{ transform: scale(1.03); }
+  @media (prefers-reduced-motion: reduce){
+    .hero-visual img{ transition: none; }
+    .hero-visual:hover img{ transform: none; }
+  }
 
   /* Sections */
   section{ padding: 64px 0; }
@@ -419,15 +430,9 @@
           </li>
         </ul>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 200 240">
-          <rect x="60" y="30" width="80" height="24" rx="8" fill="none" stroke="currentColor" stroke-width="2" opacity=".5"/>
-          <rect x="46" y="54" width="108" height="164" rx="20" fill="none" stroke="currentColor" stroke-width="2"/>
-          <rect x="62" y="96" width="76" height="70" rx="4" fill="none" stroke="currentColor" stroke-width="1.6" opacity=".7"/>
-          <line x1="72" y1="112" x2="128" y2="112" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
-          <line x1="72" y1="124" x2="128" y2="124" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
-          <line x1="72" y1="136" x2="112" y2="136" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
-        </svg>
+      <div class="hero-visual">
+        <img src="hero-bottle.jpg" width="1000" height="1000"
+             alt="Банка добавки с чёрной этикеткой" fetchpriority="high" decoding="async">
       </div>
     </div>
   </section>

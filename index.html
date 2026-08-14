@@ -743,6 +743,15 @@
       });
     }, { threshold: .12 });
     revealTargets.forEach(function(el){ io.observe(el); });
+
+    // Страховка: если наблюдатель не отработал (встроенные браузеры,
+    // фоновая вкладка), показываем всё, чтобы контент не остался невидимым.
+    setTimeout(function(){
+      if(document.querySelectorAll('.reveal-in').length === 0){
+        revealTargets.forEach(function(el){ el.classList.add('reveal-in'); });
+        counters.forEach(function(el){ runCounter(el); });
+      }
+    }, 2000);
   }
 
 })();

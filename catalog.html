@@ -433,7 +433,7 @@
     from{ opacity: 0; transform: translateY(10px); }
     to{ opacity: 1; transform: none; }
   }
-  .card-enter{ animation: cardIn .4s var(--ease) both; }
+  .card-enter{ animation: cardIn .4s var(--ease) backwards; }
 
   /* Пульс счётчика при добавлении */
   @keyframes cartBump{
@@ -1086,6 +1086,13 @@
       });
     }, { threshold: .12 });
     revealTargets.forEach(function(el){ io.observe(el); });
+
+    // Страховка на случай, если наблюдатель не отработает
+    setTimeout(function(){
+      if(document.querySelectorAll('.reveal-in').length === 0){
+        revealTargets.forEach(function(el){ el.classList.add('reveal-in'); });
+      }
+    }, 2000);
   }
 
 })();

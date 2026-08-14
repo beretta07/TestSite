@@ -744,6 +744,7 @@
   }
 
   var sortMode = 'default';
+  var enterCleanupTimer = null;
 
   function renderGrid(){
     var list = activeCat === 'all' ? PRODUCTS.slice() : PRODUCTS.filter(function(p){ return p.cat === activeCat; });
@@ -775,10 +776,20 @@
     }).join('');
 
     if(!reduceMotion.matches){
-      Array.prototype.forEach.call(gridEl.children, function(card, i){
+      var animated = Array.prototype.slice.call(gridEl.children);
+      animated.forEach(function(card, i){
         card.classList.add('card-enter');
         card.style.animationDelay = Math.min(i, 9) * 35 + 'ms';
       });
+      // Снимаем класс после проигрывания. Если анимация почему-то
+      // не запустится, карточки всё равно станут видимыми.
+      clearTimeout(enterCleanupTimer);
+      enterCleanupTimer = setTimeout(function(){
+        animated.forEach(function(card){
+          card.classList.remove('card-enter');
+          card.style.animationDelay = '';
+        });
+      }, 1200);
     }
   }
 

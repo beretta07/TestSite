@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Страница не найдена — shoppmeri</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cmask id='m'%3E%3Crect width='512' height='512' fill='%23000'/%3E%3Ccircle cx='256' cy='256' r='170' fill='%23fff'/%3E%3Cg fill='%23000'%3E%3Crect x='155' y='60' width='30' height='241'/%3E%3Crect x='241' y='130' width='30' height='253'/%3E%3Crect x='327' y='211' width='30' height='241'/%3E%3C/g%3E%3C/mask%3E%3Crect width='512' height='512' rx='115' fill='%230A0A0C' mask='url(%23m)'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)">
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('mm-theme');
+    var dark = saved === 'dark' ||
+      ((!saved || saved === 'auto') && matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  }catch(e){}
+})();
+</script>
+<style>
+  :root{
+    --bg: #FFFFFF;
+    --surface: #F4F5F7;
+    --ink: #10131A;
+    --ink-65: color-mix(in srgb, var(--ink) 65%, var(--bg));
+    --line: color-mix(in srgb, var(--ink) 12%, var(--bg));
+    --accent: #1E46D6;
+    --accent-ink: #FFFFFF;
+    --ease: cubic-bezier(.32,.72,0,1);
+    --radius-s: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #0B0E14; --surface: #12151D; --ink: #ECEEF3;
+      --line: color-mix(in srgb, var(--ink) 14%, var(--bg));
+      --accent: #6E8CFF; --accent-ink: #0B0E14;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B0E14; --surface: #12151D; --ink: #ECEEF3;
+    --line: color-mix(in srgb, var(--ink) 14%, var(--bg));
+    --accent: #6E8CFF; --accent-ink: #0B0E14;
+  }
+  :root[data-theme="light"]{
+    --bg: #FFFFFF; --surface: #F4F5F7; --ink: #10131A;
+    --line: color-mix(in srgb, var(--ink) 12%, var(--bg));
+    --accent: #1E46D6; --accent-ink: #FFFFFF;
+  }
+
+  *,*::before,*::after{ box-sizing: border-box; }
+  body{
+    margin: 0; min-height: 100vh;
+    background: var(--bg); color: var(--ink);
+    font-family: var(--font-sans); font-size: 16px; line-height: 1.5;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  svg{ display: block; }
+  .wrap{ max-width: 460px; text-align: center; }
+  .mark{ margin: 0 auto 28px; color: var(--ink); }
+  .code{
+    font-family: var(--font-mono); font-size: 13px;
+    letter-spacing: .1em; color: var(--ink-65); text-transform: uppercase;
+  }
+  h1{
+    font-size: 30px; line-height: 1.15; letter-spacing: -.01em;
+    margin: 14px 0 0; text-wrap: balance;
+  }
+  p{ margin: 14px 0 0; color: var(--ink-65); font-size: 15.5px; }
+  .actions{ display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 32px; }
+  .btn{
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 50px; padding: 0 24px; border-radius: 999px;
+    font-size: 15px; font-weight: 600; text-decoration: none; cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform .18s var(--ease), background-color .18s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active{ transform: scale(.97); }
+  .btn-primary{ background: var(--accent); color: var(--accent-ink); }
+  .btn-secondary{ background: transparent; border-color: var(--line); color: var(--ink); }
+  .btn-secondary:hover{ background: var(--surface); }
+  :focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce){
+    .btn{ transition: none; }
+    .btn:active{ transform: none; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <svg class="mark" width="56" height="56" viewBox="0 0 512 512" aria-hidden="true">
+      <mask id="markCut404">
+        <rect width="512" height="512" fill="#000"/>
+        <circle cx="256" cy="256" r="170" fill="#fff"/>
+        <g fill="#000">
+          <rect x="155" y="60" width="30" height="241"/>
+          <rect x="241" y="130" width="30" height="253"/>
+          <rect x="327" y="211" width="30" height="241"/>
+        </g>
+      </mask>
+      <rect width="512" height="512" fill="currentColor" mask="url(#markCut404)"/>
+    </svg>
+    <p class="code">Ошибка 404</p>
+    <h1>Такой страницы нет</h1>
+    <p>Возможно, ссылка устарела или в адресе опечатка. Каталог и контакты — на месте.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="/TestSite/catalog.html">Смотреть каталог</a>
+      <a class="btn btn-secondary" href="/TestSite/">На главную</a>
+    </div>
+  </main>
+</body>
+</html>

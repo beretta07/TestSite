@@ -348,11 +348,12 @@
     background: var(--bg);
     border-left: 1px solid var(--line);
     transform: translateX(100%);
-    transition: transform .4s var(--ease);
+    visibility: hidden;
+    transition: transform .4s var(--ease), visibility .4s linear;
     z-index: 151;
     display: flex; flex-direction: column;
   }
-  .drawer.open{ transform: translateX(0); }
+  .drawer.open{ transform: translateX(0); visibility: visible; }
   .drawer-head{
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px; border-bottom: 1px solid var(--line);
@@ -404,6 +405,8 @@
   .drawer-note{ font-size: 12px; color: var(--ink-65); margin-top: 12px; text-align: center; }
 
   /* Mobile cart bar */
+  body.has-cart-bar{ padding-bottom: 84px; }
+  @media (min-width: 640px){ body.has-cart-bar{ padding-bottom: 0; } }
   .mobile-cart-bar{
     display: none;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 140;
@@ -424,6 +427,30 @@
   /* Scroll reveal */
   .reveal{ opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
   .reveal-in{ opacity: 1; transform: translateY(0); }
+
+  /* Появление карточек при фильтрации */
+  @keyframes cardIn{
+    from{ opacity: 0; transform: translateY(10px); }
+    to{ opacity: 1; transform: none; }
+  }
+  .card-enter{ animation: cardIn .4s var(--ease) both; }
+
+  /* Пульс счётчика при добавлении */
+  @keyframes cartBump{
+    0%{ transform: scale(1); }
+    35%{ transform: scale(1.4); }
+    100%{ transform: scale(1); }
+  }
+  .cart-count.bump{ animation: cartBump .4s var(--ease); }
+
+  /* Тень шапки при прокрутке */
+  header{ transition: box-shadow .25s ease; }
+  header.scrolled{ box-shadow: 0 6px 24px color-mix(in srgb, var(--ink) 9%, transparent); }
+
+  @media (prefers-reduced-motion: reduce){
+    .card-enter, .cart-count.bump{ animation: none; }
+    header{ transition: none; }
+  }
 
   [hidden]{ display: none !important; }
   .sr-only{
@@ -574,6 +601,8 @@
 <script>
 (function(){
   "use strict";
+
+  var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
   var CATEGORIES = [
     { id: 'all', label: 'Все' },
@@ -744,6 +773,13 @@
         '</div>' +
       '</article>';
     }).join('');
+
+    if(!reduceMotion.matches){
+      Array.prototype.forEach.call(gridEl.children, function(card, i){
+        card.classList.add('card-enter');
+        card.style.animationDelay = Math.min(i, 9) * 35 + 'ms';
+      });
+    }
   }
 
   chipsEl.addEventListener('click', function(e){
@@ -763,6 +799,7 @@
     var btn = e.target.closest('.btn-add');
     if(!btn) return;
     addToCart(btn.dataset.id);
+    bumpCartCount();
     btn.dataset.added = 'true';
     btn.textContent = 'Добавлено';
     setTimeout(function(){
@@ -816,6 +853,7 @@
   var navPanel = document.getElementById('nav-panel');
   function setMenu(open){
     menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
     navPanel.classList.toggle('open', open);
     if(open){ navPanel.removeAttribute('inert'); }
     else{ navPanel.setAttribute('inert', ''); }
@@ -877,11 +915,19 @@
   var mobileCartBar = document.getElementById('mobile-cart-bar');
   var mobileCartSummary = document.getElementById('mobile-cart-summary');
 
+  function bumpCartCount(){
+    if(reduceMotion.matches) return;
+    cartCountEl.classList.remove('bump');
+    void cartCountEl.offsetWidth;
+    cartCountEl.classList.add('bump');
+  }
+
   function renderCart(){
     var totalQty = cart.reduce(function(s,i){ return s + i.qty; }, 0);
     cartCountEl.hidden = totalQty === 0;
     cartCountEl.textContent = totalQty;
     mobileCartBar.hidden = totalQty === 0;
+    document.body.classList.toggle('has-cart-bar', totalQty > 0);
 
     if(!cart.length){
       drawerBody.innerHTML = '<p class="drawer-empty">Корзина пока пуста</p>';
@@ -1020,8 +1066,16 @@
   document.getElementById('mobile-cart-checkout').addEventListener('click', openTelegramCheckout);
 
   /* ---------- Scroll reveal ---------- */
-  var revealTargets = document.querySelectorAll('.page-head, .toolbar, .card, .about-card, .channel');
-  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  /* ---------- Тень шапки при прокрутке ---------- */
+  var headerEl2 = document.querySelector('header');
+  function onScroll(){
+    headerEl2.classList.toggle('scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  var revealTargets = document.querySelectorAll('.page-head, .toolbar');
+  if('IntersectionObserver' in window && !reduceMotion.matches){
     revealTargets.forEach(function(el){ el.classList.add('reveal'); });
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){

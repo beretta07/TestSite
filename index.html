@@ -15,8 +15,7 @@
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="1000">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" id="theme-color-meta" content="#ffffff">
 <script>
 (function(){
   try{
@@ -24,6 +23,10 @@
     var dark = saved === 'dark' ||
       ((!saved || saved === 'auto') && matchMedia('(prefers-color-scheme: dark)').matches);
     document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    // Цвет полосы браузера должен следовать выбранной теме, а не только
+    // системной — иначе при ручном выборе шапка браузера не совпадает со страницей.
+    var m = document.getElementById('theme-color-meta');
+    if(m) m.setAttribute('content', dark ? '#0b0e14' : '#ffffff');
   }catch(e){}
 })();
 </script>
@@ -650,9 +653,14 @@
     }catch(e){ return 'auto'; }
   }
 
+  var themeColorMeta = document.getElementById('theme-color-meta');
+
   function applyChoice(choice, persist){
     var effective = choice === 'auto' ? (darkMedia.matches ? 'dark' : 'light') : choice;
     document.documentElement.setAttribute('data-theme', effective);
+    if(themeColorMeta){
+      themeColorMeta.setAttribute('content', effective === 'dark' ? '#0b0e14' : '#ffffff');
+    }
     themeButtons.forEach(function(b){
       b.setAttribute('aria-pressed', b.dataset.themeChoice === choice ? 'true' : 'false');
     });

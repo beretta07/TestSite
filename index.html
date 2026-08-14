@@ -383,6 +383,13 @@
     display: grid; gap: 24px;
     padding: 32px 0;
   }
+  @media (max-width: 699px){
+    .stats-grid{ gap: 0; }
+    .stat{ padding-block: 20px; text-align: center; }
+    .stat:first-child{ padding-top: 0; }
+    .stat:last-child{ padding-bottom: 0; }
+    .stat + .stat{ border-top: 1px solid var(--line); }
+  }
   @media (min-width: 700px){
     .stats-grid{ grid-template-columns: repeat(3,1fr); gap: 32px; padding: 40px 0; }
   }
